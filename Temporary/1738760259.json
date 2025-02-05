@@ -1,0 +1,12 @@
+[
+    {
+        "Filename": "sunset_beach.jpg",
+        "Link": "https://example.com/download/sunset_beach.jpg",
+        "Size": 0.987654321
+    },
+    {
+        "Filename": "mountain_view.jpg",
+        "Link": "https://example.com/download/mountain_view.jpg",
+        "Size": 0.123456789
+    }
+]
