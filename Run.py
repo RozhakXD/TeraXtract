@@ -45,8 +45,8 @@ def Get_Info(shorturl: str, pwd: str) -> list:
                 json_data = json.loads(response.text)
                 shareid, uk, sign, timestamp = json_data['shareid'], json_data['uk'], json_data['sign'], json_data['timestamp']
                 finds_filename = re.findall(r'"filename":"(.*?)"', response.text)
-                finds_fs_id = re.findall(r'"fs_id":(\d+)', response.text)
-                finds_size = re.findall(r'"size":(\d+)', response.text)
+                finds_fs_id = re.findall(r'"fs_id":"(\d+)"', response.text)
+                finds_size = re.findall(r'"size":"(\d+)"', response.text)
                 if not (finds_fs_id and finds_filename and finds_size):
                     Println(f"[bold medium_purple4]   ──>[bold red] ERROR: MISSING FS_ID, FILENAME, OR SIZE!         ", end="\r")
                     time.sleep(4.5)
